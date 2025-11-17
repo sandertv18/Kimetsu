@@ -1,0 +1,14 @@
+{
+	id: "c9db194a-9bc9-3309-9793-3b77b45ab960"
+	type: "player"
+	player_name: "NeroMr"
+	ranks: { }
+	properties: {
+		"ftbteams:display_name": "NeroMr"
+		"ftbteams:color": "#59FF7E"
+		"ftbteams:description": ""
+		"ftbteams:free_to_join": 0b
+	}
+	message_history: [ ]
+	extra: { }
+}

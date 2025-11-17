@@ -1,0 +1,14 @@
+{
+	id: "eedd79f4-52d7-3907-b135-85c2fee27c97"
+	type: "player"
+	player_name: "Uki"
+	ranks: { }
+	properties: {
+		"ftbteams:display_name": "Uki"
+		"ftbteams:color": "#FFF859"
+		"ftbteams:description": ""
+		"ftbteams:free_to_join": 0b
+	}
+	message_history: [ ]
+	extra: { }
+}

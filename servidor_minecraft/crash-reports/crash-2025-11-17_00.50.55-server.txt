@@ -1,0 +1,109 @@
+---- Minecraft Crash Report ----
+// Why is it breaking :(
+
+Time: 11/17/25, 12:50 AM
+Description: Exception in server tick loop
+
+java.lang.NoClassDefFoundError: dev/ftb/mods/ftblibrary/snbt/SNBTCompoundTag
+	at dev.ftb.mods.ftbteams.FTBTeams.serverAboutToStart(FTBTeams.java:52) ~[ftbteams:1605.2.3-build.40] {re:classloading}
+	at me.shedaniel.architectury.event.forge.EventHandlerImplCommon.event(EventHandlerImplCommon.java:367) ~[architectury:?] {re:classloading}
+	at net.minecraftforge.eventbus.ASMEventHandler_44_EventHandlerImplCommon_event_FMLServerAboutToStartEvent.invoke(.dynamic) ~[?:?] {}
+	at net.minecraftforge.eventbus.ASMEventHandler.invoke(ASMEventHandler.java:85) ~[eventbus-4.0.0.jar:?] {}
+	at net.minecraftforge.eventbus.EventBus.post(EventBus.java:302) ~[eventbus-4.0.0.jar:?] {}
+	at net.minecraftforge.eventbus.EventBus.post(EventBus.java:283) ~[eventbus-4.0.0.jar:?] {}
+	at net.minecraftforge.fml.server.ServerLifecycleHooks.handleServerAboutToStart(ServerLifecycleHooks.java:81) ~[forge:?] {re:classloading}
+	at net.minecraft.server.dedicated.DedicatedServer.func_71197_b(DedicatedServer.java:166) ~[?:?] {re:classloading,pl:accesstransformer:B}
+	at net.minecraft.server.MinecraftServer.func_240802_v_(MinecraftServer.java:621) ~[?:?] {re:mixin,pl:accesstransformer:B,xf:fml:xaerominimap:xaero_minecraftserver,xf:fml:xaeroworldmap:xaero_wm_minecraftserver,pl:runtimedistcleaner:A,re:classloading,pl:accesstransformer:B,xf:fml:xaerominimap:xaero_minecraftserver,xf:fml:xaeroworldmap:xaero_wm_minecraftserver,pl:mixin:APP:modernfix-common.mixins.json:perf.dedicated_reload_executor.MinecraftServerMixin,pl:mixin:APP:modernfix-common.mixins.json:core.MinecraftServerMixin,pl:mixin:A,pl:runtimedistcleaner:A}
+	at net.minecraft.server.MinecraftServer.func_240783_a_(MinecraftServer.java:232) ~[?:?] {re:mixin,pl:accesstransformer:B,xf:fml:xaerominimap:xaero_minecraftserver,xf:fml:xaeroworldmap:xaero_wm_minecraftserver,pl:runtimedistcleaner:A,re:classloading,pl:accesstransformer:B,xf:fml:xaerominimap:xaero_minecraftserver,xf:fml:xaeroworldmap:xaero_wm_minecraftserver,pl:mixin:APP:modernfix-common.mixins.json:perf.dedicated_reload_executor.MinecraftServerMixin,pl:mixin:APP:modernfix-common.mixins.json:core.MinecraftServerMixin,pl:mixin:A,pl:runtimedistcleaner:A}
+	at java.lang.Thread.run(Thread.java:829) [?:?] {}
+Caused by: java.lang.ClassNotFoundException: dev.ftb.mods.ftblibrary.snbt.SNBTCompoundTag
+	at java.lang.ClassLoader.findClass(ClassLoader.java:724) ~[?:?] {}
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:594) ~[?:?] {}
+	at cpw.mods.modlauncher.TransformingClassLoader.loadClass(TransformingClassLoader.java:106) ~[modlauncher-8.1.3.jar:?] {re:classloading}
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:527) ~[?:?] {}
+	... 11 more
+	Suppressed: java.lang.ClassNotFoundException
+		at cpw.mods.modlauncher.TransformingClassLoader$DelegatedClassLoader.findClass(TransformingClassLoader.java:282) ~[modlauncher-8.1.3.jar:?] {}
+		at cpw.mods.modlauncher.TransformingClassLoader.loadClass(TransformingClassLoader.java:136) ~[modlauncher-8.1.3.jar:?] {re:classloading}
+		at cpw.mods.modlauncher.TransformingClassLoader.loadClass(TransformingClassLoader.java:98) ~[modlauncher-8.1.3.jar:?] {re:classloading}
+		at java.lang.ClassLoader.loadClass(ClassLoader.java:527) ~[?:?] {}
+		at dev.ftb.mods.ftbteams.FTBTeams.serverAboutToStart(FTBTeams.java:52) ~[ftbteams:1605.2.3-build.40] {re:classloading}
+		at me.shedaniel.architectury.event.forge.EventHandlerImplCommon.event(EventHandlerImplCommon.java:367) ~[architectury:?] {re:classloading}
+		at net.minecraftforge.eventbus.ASMEventHandler_44_EventHandlerImplCommon_event_FMLServerAboutToStartEvent.invoke(.dynamic) ~[?:?] {}
+		at net.minecraftforge.eventbus.ASMEventHandler.invoke(ASMEventHandler.java:85) ~[eventbus-4.0.0.jar:?] {}
+		at net.minecraftforge.eventbus.EventBus.post(EventBus.java:302) ~[eventbus-4.0.0.jar:?] {}
+		at net.minecraftforge.eventbus.EventBus.post(EventBus.java:283) ~[eventbus-4.0.0.jar:?] {}
+		at net.minecraftforge.fml.server.ServerLifecycleHooks.handleServerAboutToStart(ServerLifecycleHooks.java:81) ~[forge:?] {re:classloading}
+		at net.minecraft.server.dedicated.DedicatedServer.func_71197_b(DedicatedServer.java:166) ~[?:?] {re:classloading,pl:accesstransformer:B}
+		at net.minecraft.server.MinecraftServer.func_240802_v_(MinecraftServer.java:621) ~[?:?] {re:mixin,pl:accesstransformer:B,xf:fml:xaerominimap:xaero_minecraftserver,xf:fml:xaeroworldmap:xaero_wm_minecraftserver,pl:runtimedistcleaner:A,re:classloading,pl:accesstransformer:B,xf:fml:xaerominimap:xaero_minecraftserver,xf:fml:xaeroworldmap:xaero_wm_minecraftserver,pl:mixin:APP:modernfix-common.mixins.json:perf.dedicated_reload_executor.MinecraftServerMixin,pl:mixin:APP:modernfix-common.mixins.json:core.MinecraftServerMixin,pl:mixin:A,pl:runtimedistcleaner:A}
+		at net.minecraft.server.MinecraftServer.func_240783_a_(MinecraftServer.java:232) ~[?:?] {re:mixin,pl:accesstransformer:B,xf:fml:xaerominimap:xaero_minecraftserver,xf:fml:xaeroworldmap:xaero_wm_minecraftserver,pl:runtimedistcleaner:A,re:classloading,pl:accesstransformer:B,xf:fml:xaerominimap:xaero_minecraftserver,xf:fml:xaeroworldmap:xaero_wm_minecraftserver,pl:mixin:APP:modernfix-common.mixins.json:perf.dedicated_reload_executor.MinecraftServerMixin,pl:mixin:APP:modernfix-common.mixins.json:core.MinecraftServerMixin,pl:mixin:A,pl:runtimedistcleaner:A}
+		at java.lang.Thread.run(Thread.java:829) [?:?] {}
+
+
+A detailed walkthrough of the error, its code path and all known details is as follows:
+---------------------------------------------------------------------------------------
+
+-- System Details --
+Details:
+	Minecraft Version: 1.16.5
+	Minecraft Version ID: 1.16.5
+	Operating System: Linux (amd64) version 6.8.0-1030-azure
+	Java Version: 11.0.28, Ubuntu
+	Java VM Version: OpenJDK 64-Bit Server VM (mixed mode, sharing), Ubuntu
+	Memory: 2831780176 bytes (2700 MB) / 2994733056 bytes (2856 MB) up to 12884901888 bytes (12288 MB)
+	CPUs: 4
+	JVM Flags: 2 total; -Xms2G -Xmx12G
+	ModLauncher: 8.1.3+8.1.3+main-8.1.x.c94d18ec
+	ModLauncher launch target: fmlserver
+	ModLauncher naming: srg
+	ModLauncher services: 
+		/mixin-0.8.4.jar mixin PLUGINSERVICE 
+		/eventbus-4.0.0.jar eventbus PLUGINSERVICE 
+		/forge-1.16.5-36.2.42.jar object_holder_definalize PLUGINSERVICE 
+		/forge-1.16.5-36.2.42.jar runtime_enum_extender PLUGINSERVICE 
+		/forge-1.16.5-36.2.42.jar capability_inject_definalize PLUGINSERVICE 
+		/accesstransformers-3.0.1.jar accesstransformer PLUGINSERVICE 
+		/forge-1.16.5-36.2.42.jar runtimedistcleaner PLUGINSERVICE 
+		/mixin-0.8.4.jar mixin TRANSFORMATIONSERVICE 
+		/forge-1.16.5-36.2.42.jar fml TRANSFORMATIONSERVICE 
+	FML: 36.2
+	Forge: net.minecraftforge:36.2.42
+	FML Language Providers: 
+		javafml@36.2
+		minecraft@1
+	Mod List: 
+		forge-1.16.5-36.2.42-server.jar                   |Minecraft                     |minecraft                     |1.16.5              |DONE      |Manifest: NOSIGNATURE
+		fast-ip-ping-v1.0.7-mc1.16.5-forge.jar            |Fast IP Ping                  |fastipping                    |1.0.7               |DONE      |Manifest: NOSIGNATURE
+		EnchantmentDescriptions-1.16.5-7.1.27.jar         |EnchantmentDescriptions       |enchdesc                      |7.1.27              |DONE      |Manifest: eb:c4:b1:67:8b:f9:0c:db:dc:4f:01:b1:8e:61:64:39:4c:10:85:0b:a6:c4:c7:48:f0:fa:95:f2:cb:08:3a:e5
+		BetterCompatibilityChecker-1.0.7-build.22+mc1.16.5|Better Compatibility Checker  |bcc                           |1.0.7-build.22+mc1.1|DONE      |Manifest: NOSIGNATURE
+		MouseTweaks-2.14-mc1.16.2.jar                     |Mouse Tweaks                  |mousetweaks                   |2.14                |DONE      |Manifest: NOSIGNATURE
+		BiomesOPlenty-1.16.5-13.1.0.488-universal.jar     |Biomes O' Plenty              |biomesoplenty                 |1.16.5-13.1.0.488   |DONE      |Manifest: NOSIGNATURE
+		Jade-1.16.4-2.8.3.jar                             |Jade                          |jade                          |2.8.3               |DONE      |Manifest: NOSIGNATURE
+		connectivity-2.3-1.16.5.jar                       |Connectivity Mod              |connectivity                  |2.3-1.16.5          |DONE      |Manifest: NOSIGNATURE
+		curios-forge-1.16.5-4.1.0.0.jar                   |Curios API                    |curios                        |1.16.5-4.1.0.0      |DONE      |Manifest: NOSIGNATURE
+		Xaeros_Minimap_25.2.6_Forge_1.16.5.jar            |Xaero's Minimap               |xaerominimap                  |25.2.6              |DONE      |Manifest: NOSIGNATURE
+		FastSuite-1.16.4-1.1.1.jar                        |FastSuite                     |fastsuite                     |1.1.1               |DONE      |Manifest: NOSIGNATURE
+		Clumps-6.0.0.28.jar                               |Clumps                        |clumps                        |6.0.0.28            |DONE      |Manifest: NOSIGNATURE
+		XaerosWorldMap_1.39.12_Forge_1.16.5.jar           |Xaero's World Map             |xaeroworldmap                 |1.39.12             |DONE      |Manifest: NOSIGNATURE
+		Placebo-1.16.5-4.7.1.jar                          |Placebo                       |placebo                       |4.7.1               |DONE      |Manifest: NOSIGNATURE
+		modernfix-forge-5.18.0+mc1.16.5.jar               |ModernFix                     |modernfix                     |5.18.0+mc1.16.5     |DONE      |Manifest: NOSIGNATURE
+		jei-1.16.5-7.8.0.1013.jar                         |Just Enough Items             |jei                           |7.8.0.1013          |DONE      |Manifest: NOSIGNATURE
+		AutoRegLib-1.6-49.jar                             |AutoRegLib                    |autoreglib                    |1.6-49              |DONE      |Manifest: NOSIGNATURE
+		obfuscate-0.6.3-1.16.5.jar                        |Obfuscate                     |obfuscate                     |0.6.3               |DONE      |Manifest: NOSIGNATURE
+		sophisticatedbackpacks-1.16.5-3.15.20.755.jar     |Sophisticated Backpacks       |sophisticatedbackpacks        |1.16.5-3.15.20.755  |DONE      |Manifest: NOSIGNATURE
+		architectury-1.32.68.jar                          |Architectury                  |architectury                  |1.32.68             |DONE      |Manifest: NOSIGNATURE
+		ferritecore-2.1.1-forge.jar                       |Ferrite Core                  |ferritecore                   |2.1.1               |DONE      |Manifest: 41:ce:50:66:d1:a0:05:ce:a1:0e:02:85:9b:46:64:e0:bf:2e:cf:60:30:9a:fe:0c:27:e0:63:66:9a:84:ce:8a
+		KimetsuAnimation_1.16.5_ver5.jar                  |kimetsuAnimationPlayer        |kimetsuanimationplayer        |5                   |DONE      |Manifest: NOSIGNATURE
+		KimetsunoYaiba_1.16.5_ver39.2.jar                 |Kimetsunoyaiba                |kimetsunoyaiba                |38.2                |DONE      |Manifest: NOSIGNATURE
+		ftb-teams-forge-1605.2.3-build.40.jar             |FTB Teams                     |ftbteams                      |1605.2.3-build.40   |DONE      |Manifest: NOSIGNATURE
+		forge-1.16.5-36.2.42-universal.jar                |Forge                         |forge                         |36.2.42             |DONE      |Manifest: 22:af:21:d8:19:82:7f:93:94:fe:2b:ac:b7:e4:41:57:68:39:87:b1:a7:5c:c6:44:f9:25:74:21:14:f5:0d:90
+		Quark-r2.4-322.jar                                |Quark                         |quark                         |r2.4-322            |DONE      |Manifest: NOSIGNATURE
+		appleskin-forge-mc1.16.x-2.5.1.jar                |AppleSkin                     |appleskin                     |2.5.1+mc1.16.4      |DONE      |Manifest: NOSIGNATURE
+		toofast-1.16.5-0.0.0.1.jar                        |Too Fast                      |toofast                       |0.0.0.1             |DONE      |Manifest: NOSIGNATURE
+		geckolib-forge-1.16.5-3.0.106.jar                 |GeckoLib                      |geckolib3                     |3.0.106             |DONE      |Manifest: NOSIGNATURE
+		corpse-1.16.5-1.0.6.jar                           |Corpse                        |corpse                        |1.16.5-1.0.6        |DONE      |Manifest: NOSIGNATURE
+	Crash Report UUID: 6d220a25-7451-4a75-981e-7fce74a368c3
+	Player Count: 0 / 20; []
+	Data Packs: vanilla, mod:forge, mod:fastipping, mod:enchdesc, mod:bcc (incompatible), mod:mousetweaks, mod:biomesoplenty, mod:jade, mod:connectivity, mod:curios, mod:xaerominimap, mod:fastsuite (incompatible), mod:clumps, mod:xaeroworldmap, mod:placebo (incompatible), mod:modernfix, mod:jei, mod:autoreglib (incompatible), mod:obfuscate, mod:sophisticatedbackpacks, mod:architectury, mod:ferritecore (incompatible), mod:kimetsuanimationplayer, mod:kimetsunoyaiba, mod:ftbteams, mod:quark (incompatible), mod:appleskin, mod:toofast (incompatible), mod:geckolib3 (incompatible), mod:corpse
+	Is Modded: Definitely; Server brand changed to 'forge'
+	Type: Dedicated Server (map_server.txt)

@@ -1,0 +1,21 @@
+{
+	id: "0d87df14-4206-4365-a6fa-90724f1d27b8"
+	type: "party"
+	owner: "c9db194a-9bc9-3309-9793-3b77b45ab960"
+	ranks: {
+		eedd79f4-52d7-3907-b135-85c2fee27c97: "member"
+		c9db194a-9bc9-3309-9793-3b77b45ab960: "owner"
+	}
+	properties: {
+		"ftbteams:display_name": "NeroMr's Party"
+		"ftbteams:color": "#59FF7E"
+		"ftbteams:description": ""
+		"ftbteams:free_to_join": 0b
+	}
+	message_history: [
+		{ from: "00000000-0000-0000-0000-000000000000", date: 1763342391468L, text: "{\"color\":\"yellow\",\"extra\":[{\"text\":\"NeroMr\"},{\"text\":\" joined your party!\"}],\"text\":\"\"}" }
+		{ from: "c9db194a-9bc9-3309-9793-3b77b45ab960", date: 1763342391471L, text: "{\"color\":\"green\",\"text\":\"Invited Uki\"}" }
+		{ from: "00000000-0000-0000-0000-000000000000", date: 1763342396426L, text: "{\"color\":\"green\",\"extra\":[{\"text\":\"Uki\"},{\"text\":\" joined your party!\"}],\"text\":\"\"}" }
+	]
+	extra: { }
+}
